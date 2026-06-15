@@ -1,0 +1,215 @@
+/*NAVBARXXXX*/
+.navbar{
+    background: linear-gradient(90deg, #2b1a12, #3a2418) !important;
+    box-shadow: 0 3px 15px rgba(0,0,0,.15);
+    padding: 0.8rem 2rem;
+    border-bottom: 3px solid #b45f06;
+}
+
+.navbar-brand img{
+    object-fit: contain;
+}
+
+.navbar-nav{
+    gap: 10px;
+}
+
+.navbar-nav .nav-link{
+    color: #f5f5f5;
+    font-weight: 500;
+    transition: .2s;
+}
+
+.navbar-nav .nav-link:hover{
+    color: #d98a2b;
+}
+
+/*=========================================================*/
+/*PERFIL NO NAVBAR*/
+.nav-icon{
+    text-decoration: none;
+    color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-right: 25px;
+    font-weight: 500;
+}
+
+.nav-icon:hover{
+    color: #d98a2b;
+}
+
+.nav-icon i{
+    font-size: 1.2rem;
+}
+/*=========================================================*/
+/*CARRINHOXXXX*/
+.nav-icon{
+    text-decoration: none;
+    color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-right: 25px;
+    font-weight: 500;
+}
+
+.nav-icon:hover{
+    color: #d98a2b;
+}
+
+.nav-icon i{
+    font-size: 1.2rem;
+}
+/*=========================================================*/
+/*/CEPXXXX*/
+.cep-link{
+    text-decoration: none;
+    color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-right: 25px;
+    font-weight: 500;
+}
+
+.cep-link i{
+    color: #d98a2b;
+}
+
+#localizacao{
+    color: #f5f5f5;
+}
+/*=========================================================*/
+/*PERFIXXXXXX*/
+.profile-btn{
+    text-decoration: none;
+    color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 10px;
+    border-radius: 8px;
+    transition: .2s;
+}
+
+.profile-btn:hover{
+    background: rgba(255,255,255,.08);
+}
+
+.profile-icon{
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #d98a2b;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-info{
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.profile-info small{
+    color: #cfcfcf;
+    font-size: .75rem;
+}
+
+.profile-info strong{
+    font-size: .9rem;
+    color: white;
+}
+
+/*DROPDOWNXXXXX*/
+/*=========================================================*/
+.dropdown-menu{
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.15);
+}
+
+.dropdown-item{
+    padding: .6rem 1rem;
+}
+
+.dropdown-item:hover{
+    background: #f8f9fa;
+}
+/*==========================================================================*/
+/*cards de produtos em baixo do carrosel*/
+.produtos-section{
+    background: #f5f5f5;
+}
+
+.titulo-produtos{
+    font-size: 4rem;
+    font-weight: 800;
+    color: #8B5A2B;
+    letter-spacing: 1px;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+.subtitulo-produtos{
+    color: #B08A63;
+    font-size: 1rem;
+    font-weight: 500;
+}
+/*cards*/
+.produto-card{ /*card de produto*/
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 150px;
+    border-radius: 18px;
+    overflow: hidden;
+    text-decoration: none;
+
+    box-shadow:
+        0 3px 10px rgba(0,0,0,.08),
+        0 8px 20px rgba(0,0,0,.10);
+}
+
+.produto-card img{ /*pra ocupar todo o espaço do card sem bugar*/
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.produto-overlay{ /*efeito dentro do card para ficar mais escuro*/
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0,0,0,.42);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.produto-overlay span{ /*texto dentro do card*/
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: .5px;
+}
+
+.footer
+{
+    background: linear-gradient(90deg, #2b1a12, #3a2418);
+    box-shadow: 0 3px 15px rgba(0,0,0,.15);
+    padding: 0.8rem 2rem;
+    border-top: 3px solid #b45f06;
+    color: #f5f5f5;
+
+    p
+    {
+        margin: 0;
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,92 @@
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient( /*cor de fundo gradiente*/
+        25deg,
+        #111111,
+        #ff6a00
+    );
+}
+
+.ContLOGIN{
+    width: 350px;
+    padding: 30px;
+
+    background: white;
+    border-radius: 12px;
+
+    
+}
+
+.ContLOGIN img{
+    width: 175px;
+    height: auto;
+    
+}
+
+.ContLOGIN label{
+    display: block;
+    margin-bottom: 2px;
+    font-weight: 600;
+    color: #333;
+}
+
+.ContLOGIN input[type="email"],
+.ContLOGIN input[type="password"]{
+    width: 100%;
+    padding: 10px;
+
+    border: 1px solid brown; /*cor das bordas e faz ela fica redondinha*/
+    border-radius: 8px; /*ese faz fica rednodo*/ 
+}
+
+.ContLOGIN input[type="checkbox"]
+{
+  height: 15px;
+  width: 20px;
+  border-radius: 8px;
+
+}
+.ContLOGIN input[type="email"]::placeholder,
+.ContLOGIN input[type="password"]::placeholder{
+    color: #999;
+}
+.ContLOGIN input:focus{ /*Preenche o botão de cadastro quando o mouse tiver em cima*/
+    border-color: #ff6a00;
+}
+
+.ContLOGIN .btn{
+    width: 100%;
+    margin-top: 10px;
+}
+
+.btn-login{
+    background: #ff6a00;
+    border: none;
+    border-radius: 8px;
+
+    height: 40px;
+    width: 100%;
+}
+
+.btn-login:hover{ /*muda a cor do botão quando o mouse passa por cima*/
+    background: #e65f00;
+}
+
+.btn-cadastro{
+    background: transparent;
+    border: 1px solid #ff6a00;
+    color: #ff6a00;
+    border-radius: 8px;  
+
+    height: 40px;
+    width: 100%;
+}
+
+.btn-cadastro:hover{ /*muda a cor do botão quando o mouse passa por cima*/
+    background: #ff6a00;
+    color: white;
+}

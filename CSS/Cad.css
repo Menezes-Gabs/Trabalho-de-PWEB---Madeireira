@@ -1,0 +1,74 @@
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient( /*cor de fundo gradiente*/
+        25deg,
+        #111111,
+        #ff6a00
+    );
+}
+
+.ContCad{
+    width: 350px;
+    padding: 30px;
+
+    background: white;
+    border-radius: 12px;   
+}
+
+.ContCad img{
+    width: 175px;
+    height: auto;
+}
+
+.ContCad label{
+    display: block;
+    margin-bottom: 2px;
+    font-weight: 600;
+    color: #333;
+}
+
+.ContCad input[type="email"],
+.ContCad input[type="password"],
+.ContCad input[type="text"],
+.ContCad input[type="date"],
+.ContCad select{
+    width: 100%;
+    padding: 10px;
+
+    border: 1px solid brown; /*cor das bordas e faz ela fica redondinha*/
+    border-radius: 8px; /*ese faz fica rednodo*/ 
+}
+
+.ContCad input[type="email"]::placeholder,
+.ContCad input[type="password"]::placeholder,
+.ContCad input[type="text"]::placeholder,
+.ContCad input[type="date"]::placeholder{
+    color: #999;
+}
+.ContCad input:focus{ /*Preenche o botão de cadastro quando o mouse tiver em cima*/
+    border-color: #ff6a00;
+}
+
+.ContCad .btn{
+    width: 100%;
+    margin-top: 10px;
+}
+
+.btn-cadastro{
+    background: transparent;
+    border: 1px solid #ff6a00;
+    color: #ff6a00;
+    border-radius: 8px;  
+
+    height: 40px;
+    width: 100%;
+}
+
+.btn-cadastro:hover{ /*muda a cor do botão quando o mouse passa por cima*/
+    background: #ff6a00;
+    color: white;
+}

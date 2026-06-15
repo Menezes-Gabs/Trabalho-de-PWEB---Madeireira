@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cadastro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/Cad.css">
+  </head>
+  <body>
+    <div class="ContCad">  
+        <img src="IMG/Titulo Png.png" alt="Logo" class="Logo"> 
+        <h6>Madeira de verdade para projetos de verdade</h6><br>
+        <form action="" method="post">
+            <label for="usuario">Usuário</label>
+            <input type="text" name="usuario" id="usuarioCad" placeholder="Digite seu nome de usuário" required> <br><br>
+
+            <label for="Nasc">Data de Nascimento</label>
+            <input type="date" name="Nasc" id="NascCad" required> <br><br>
+
+            <label for="email" required>Email</label>
+            <input type="email" name="email" id="emailCad" placeholder="Exemplo@gmail.com" required> <br><br>
+
+            <label for="senha" required>Senha</label>
+            <input type="password" name="senha" id="senhaCad" placeholder="Digite sua senha" required> <br><br>
+
+            <label for="CEP">Informe seu cep</label>
+            <input type="text" name="CEP" id="CEPCad" placeholder="*****-***" required> <br><br>
+
+            <label for="Estado">Estado</label>
+            <select name="Estado" id="EstadoCad" required>
+                <option value="">Selecione um estado</option>
+                <option value="SP">SP</option>
+                <option value="RJ">RJ</option>
+            </select> <br><br>
+        
+            <button type="submit" class="btn-cadastro">Cadastrar</button>
+        </form>
+    </div>
+       
+    <script src="JS/indexJS.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>    
+  </body>
+</html>
