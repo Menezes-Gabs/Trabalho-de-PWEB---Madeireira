@@ -141,3 +141,89 @@
 .dropdown-item:hover{
     background: #f8f9fa;
 }
+
+/* ==========================
+   TÍTULO DA PÁGINA
+========================== */
+
+.titulo-categoria{
+    text-align: center;
+    margin: 50px 0;
+}
+
+.titulo-categoria h1{
+    font-size: 3rem;
+    font-weight: 700;
+    color: #5a3e2b;
+}
+
+.titulo-categoria p{
+    color: #666;
+    font-size: 1.1rem;
+}
+
+/* ==========================
+   CARD PRODUTO
+========================== */
+
+.produto-card{
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    background: #ffffff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.produto-img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.produto-body{
+    padding: 20px;
+}
+
+.produto-titulo{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.produto-descricao{
+    color: #666;
+    font-size: 0.9rem;
+    min-height: 45px;
+}
+
+.produto-preco{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #198754;
+}
+
+.produto-estoque{
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.btn-produto{
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: 600;
+}
+
+.footer
+{
+    background: linear-gradient(90deg, #2b1a12, #3a2418);
+    padding: 0.8rem 2rem;
+    border-top: 3px solid #b45f06;
+    color: #f5f5f5;
+
+    p
+    {
+        margin: 0;
+        font-size: 12px;
+    }
+}
