@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre nós - Empresa</title>
+    <title>Pagina inicial</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"> <!---- Ícones do Bootstrap --->
     <link rel="stylesheet" href="CSS/Mercadorias.css">
@@ -26,6 +26,8 @@
             <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="Empresa.html">Nossa Empresa</a></li>
                 <li><a class="dropdown-item" href="Equipe.html">Nossa Equipe</a></li>
+                <li><a class="dropdown-item" href="FAQ.html">FAQ</a></li>
+                <li><a class="dropdown-item" href="Dicas.html">Dicas</a></li>
             </ul>
         </li>
 
@@ -90,7 +92,7 @@
     <!--=======================Perfil de usuário===========================-->
     <div class="d-flex align-items-center">
 
-        <a href="#" class="nav-icon me-4">
+        <a href="Vendas.html" class="nav-icon me-4">
             <i class="bi bi-receipt"></i>
             <span>Pedidos</span>
         </a>
@@ -134,68 +136,35 @@
 
     </ul>
 </div>
-
-    </div>
-    </div>
-</nav>
-<!-- ================= ================= -->
-<section class="container py-5">
-
-    <h1 class="mb-4">Meu Carrinho</h1>
-
-    <div id="listaCarrinho"></div>
-
-    <div class="card p-4 mt-4">
-
-    <p>
-        Subtotal:
-        <strong>R$ <span id="subtotal">0.00</span></strong>
-    </p>
-
-    <p>
-        Frete:
-        <strong>R$ <span id="valorFrete">0.00</span></strong>
-    </p>
-
-    <div class="mb-3">
-
-        <label class="form-label">
-            Forma de Pagamento
-        </label>
-
-        <select id="pagamento" class="form-select">
-
-            <option value="pix">
-                PIX (15% OFF)
-            </option>
-
-            <option value="credito">
-                Cartão de Crédito (+5%)
-            </option>
-
-            <option value="debito">
-                Cartão de Débito
-            </option>
-
-        </select>
-
-    </div>
-
-    <hr>
-
-    <h3>
-        Total:
-        R$ <span id="total">0.00</span>
-    </h3>
-
-    <button id="btnFinalizar" class="btn btn-success mt-3">
-        Finalizar Compra
-    </button>
-
 </div>
+</nav>
+<!---================================================-->
+ <section class="container py-5"> 
+    <h2 class="Dicas">Dicas</h2> 
+        <ul class="Dicas">
+            <li>ESCOLHA E PLANEJAMENTO</li>
+            <p>Combine a madeira com o ambiente: Áreas externas exigem madeiras duras e resistentes(como <strong>Cumaru ou Ipê</strong>). Enquanto áreas internas aceitam opções mais leves</p>
+            <p>Considere a umidade do local: banheiros e cozinhas pedem madeiras de alta densidade ou tratadas em autoclave</p>
+            <p>Calcule 10% de sobra: Erros de corte e nós naturais acontecem. Compre sempre uma margem de segurança</p>
 
-</section>
-<!---->
+            <li>ARMAZENAMENTO NO CANTEIRO DE OBRAS</li>
+            <p>Evite o contato direto com o chão: empilhe as peças sobre calços de concreto ou pontaletes de madeira</p>
+            <p>Mantenha o alinhamento: Guarde as tábuas e vigas na horizontal para evitar o empenamento</p>
+            <p>Proteja do sol e da chuva: Cubra o material com lona impermeável, mas deixe as laterais livres para o ar circular</p>   
+
+            <li>INSTALAÇÃO E ACABAMENTO</li>
+            <p>Trate antes de montar: Aplique cupinicidas e seladores em todos os lados da peça antes da fixação</p>
+            <p>Proteja os topos dos cortes: As pontas cortadas absorvem mais umidade. Sele-as imediatamente</p>
+            <p>Respeite as juntas da dilatação: A madeira se movimenta com o clima. Deixe pequenos vãos indicados para decks e pisos</p>
+
+            <li>MANUTENÇÃO LONGO PRAZO</li>
+            <p>Prefira stain a verniz: O stainpenetra na fibra e não descasca, facilitando a reaplicação no futuro</p>
+            <p>Evite Limpeza pesada: Use apenas pano levemente úmido e sabão neutro. Nunca jogue água diretamente</p>
+            <p></p>
+        </ul>
+
+    </section> 
+<!----===============================================-->
 <div class="footer">
     <div class="container">
         <div class="row">
@@ -216,7 +185,6 @@
     <script src="JS/Usuario.js"></script>
     <!--esse js serve para manipular os dados de CEP com uma API-->
     <script src="JS/CEP.js"></script>
-    <script src="JS/Carrinho.js"></script>
-    <script src="JS/CarrinhoPag.js"></script>
+    <script src="js/Carrinho.js"></script>
 </body>
 </html>

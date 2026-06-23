@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre nós - Empresa</title>
+    <title>Pagina inicial</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"> <!---- Ícones do Bootstrap --->
     <link rel="stylesheet" href="CSS/Mercadorias.css">
@@ -138,64 +138,39 @@
     </div>
     </div>
 </nav>
-<!-- ================= ================= -->
-<section class="container py-5">
+<!---======================================================================================-->
+<section class="container py-5"> 
+<h1 class="titulo-produtos">FAQ</h1> 
+    <div class="caixa"> 
+        <li>
+        <p> 
+            <div class="FAQ"><strong>1 - Vocês realizam entregas? </strong></div><br>
+            Sim. Realizamos entregas em diversas regiões. O prazo e o valor do frete variam de acordo com a localização
+        </p> 
+        </li> 
+        <li>
+        <p> 
+            <div class="FAQ"><strong>2 - Quais formas de pagamento são aceitas?</strong></div><br>
+            Aceitamos cartão de crédito, de debito e pix
+        </p> 
+        </li>
+          <li>
+        <p> 
+            <div class="FAQ"><strong>3 - Vocês trabalham apenas com madeiras?</strong></div><br>
+            Não. além de madeiras tambem oferecemos vernizes, tintas, ferramentas e diversos materiais de construção!            
+        </p> 
+        </li>
 
-    <h1 class="mb-4">Meu Carrinho</h1>
+           <li>
+        <p> 
+            <div class="FAQ"><strong>4 - É possivel trocar um produto?</strong></div><br>
+            Sim. Entre em contato com o nosso <a href="Contatos.html">suporte</a> e avaliaremos seu caso!
+        </p> 
+        </li>
+    </div> 
+    </section>
+<!--========================================================================================--->
 
-    <div id="listaCarrinho"></div>
-
-    <div class="card p-4 mt-4">
-
-    <p>
-        Subtotal:
-        <strong>R$ <span id="subtotal">0.00</span></strong>
-    </p>
-
-    <p>
-        Frete:
-        <strong>R$ <span id="valorFrete">0.00</span></strong>
-    </p>
-
-    <div class="mb-3">
-
-        <label class="form-label">
-            Forma de Pagamento
-        </label>
-
-        <select id="pagamento" class="form-select">
-
-            <option value="pix">
-                PIX (15% OFF)
-            </option>
-
-            <option value="credito">
-                Cartão de Crédito (+5%)
-            </option>
-
-            <option value="debito">
-                Cartão de Débito
-            </option>
-
-        </select>
-
-    </div>
-
-    <hr>
-
-    <h3>
-        Total:
-        R$ <span id="total">0.00</span>
-    </h3>
-
-    <button id="btnFinalizar" class="btn btn-success mt-3">
-        Finalizar Compra
-    </button>
-
-</div>
-
-</section>
-<!---->
 <div class="footer">
     <div class="container">
         <div class="row">
@@ -216,7 +191,6 @@
     <script src="JS/Usuario.js"></script>
     <!--esse js serve para manipular os dados de CEP com uma API-->
     <script src="JS/CEP.js"></script>
-    <script src="JS/Carrinho.js"></script>
-    <script src="JS/CarrinhoPag.js"></script>
+    <script src="js/Carrinho.js"></script>
 </body>
 </html>

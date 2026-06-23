@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre nós - Empresa</title>
+    <title>Pagina inicial</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"> <!---- Ícones do Bootstrap --->
-    <link rel="stylesheet" href="CSS/Mercadorias.css">
+    <link rel="stylesheet" href="css/Produtos.css">
 </head>
 <body>
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -24,8 +24,8 @@
                 Sobre Nós
             </a>
             <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="Empresa.html">Nossa Empresa</a></li>
-                <li><a class="dropdown-item" href="Equipe.html">Nossa Equipe</a></li>
+                <li><a class="dropdown-item" href="#">Nossa Empresa</a></li>
+                <li><a class="dropdown-item" href="#">Nossa Equipe</a></li>
             </ul>
         </li>
 
@@ -44,7 +44,7 @@
         </li>
         <!--contatoxxxxx-->
         <li class="nav-item">
-            <a class="nav-link" href="Contatos.html">Contato</a>
+            <a class="nav-link" href="#">Contato</a>
         </li>
 
        <div class="dropdown me-4">
@@ -135,67 +135,142 @@
     </ul>
 </div>
 
-    </div>
-    </div>
+</div>
+</div>
 </nav>
-<!-- ================= ================= -->
+<!---======================================================================================-->
 <section class="container py-5">
 
-    <h1 class="mb-4">Meu Carrinho</h1>
+   <div class="titulo-categoria">
 
-    <div id="listaCarrinho"></div>
+        <h1>TELHAS</h1>
+    </div>
+ 
+   <!--Cards de produtos-->
+    <div class="row g-4">
 
-    <div class="card p-4 mt-4">
+        <div class="col-lg-3 col-md-6">
 
-    <p>
-        Subtotal:
-        <strong>R$ <span id="subtotal">0.00</span></strong>
-    </p>
+            <div class="produto-card">
 
-    <p>
-        Frete:
-        <strong>R$ <span id="valorFrete">0.00</span></strong>
-    </p>
+                <img src="img/Telha Ceramica.jpeg" class="produto-img" alt="Telha Cerâmica">
 
-    <div class="mb-3">
+                <div class="produto-info">
 
-        <label class="form-label">
-            Forma de Pagamento
-        </label>
+                    <h5>Telha Cerâmica</h5> 
+                    
+                    <div class="preco">
+                        <strong>R$ 45,00</strong>
+                    </div>
+                    
+                <button
+                class="btn btn-warning w-100 btn-carrinho"
+                data-id="5"
+                data-nome="Telha Cerâmica"
+                data-preco="45.00">
 
-        <select id="pagamento" class="form-select">
+                Adicionar ao Carrinho
 
-            <option value="pix">
-                PIX (15% OFF)
-            </option>
+                </button>
+                </div>
 
-            <option value="credito">
-                Cartão de Crédito (+5%)
-            </option>
+                
 
-            <option value="debito">
-                Cartão de Débito
-            </option>
+            </div>
 
-        </select>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+
+            <div class="produto-card">
+
+                <img src="img/Telha Termoacustica.webp" class="produto-img" alt="Telha Termoacústica">
+
+                <div class="produto-info">
+
+                    <h5>Telha Termoacústica</h5>
+
+                    <div class="preco">
+                        <strong>R$ 30,00</strong>
+                    </div>
+
+                   <button
+                class="btn btn-warning w-100 btn-carrinho"
+                data-id="6"
+                data-nome="Telha Termoacústica"
+                data-preco="30.00">
+
+                Adicionar ao Carrinho
+
+                </button>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+
+            <div class="produto-card">
+
+                <img src="img/Telha Fibrocimento.webp" class="produto-img" alt="Telha de Fibrocimento">
+
+                <div class="produto-info">
+
+                    <h5>Telha de Fibrocimento</h5>
+
+                    <div class="preco">
+                        <strong>R$ 35,00</strong>
+                    </div>
+
+                    <button
+                class="btn btn-warning w-100 btn-carrinho"
+                data-id="7"
+                data-nome="Telha de Fibrocimento"
+                data-preco="35.00">
+
+                Adicionar ao Carrinho
+
+                </button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+
+            <div class="produto-card">
+
+                <img src="img/Madeira Metalica.webp" class="produto-img" alt="Telha Metálica">
+
+                <div class="produto-info">
+
+                    <h5>Telha Metálica</h5>
+
+                    <div class="preco">
+                        <strong>R$ 30,00</strong>
+                    </div>
+
+                    <button
+                class="btn btn-warning w-100 btn-carrinho"
+                data-id="8"
+                data-nome="Telha Metálica"
+                data-preco="30.00">
+
+                Adicionar ao Carrinho
+
+                </button>
+                </div>
+
+            </div>
+
+        </div>
 
     </div>
 
-    <hr>
-
-    <h3>
-        Total:
-        R$ <span id="total">0.00</span>
-    </h3>
-
-    <button id="btnFinalizar" class="btn btn-success mt-3">
-        Finalizar Compra
-    </button>
-
-</div>
 
 </section>
-<!---->
+<!---======================================================================================--->
 <div class="footer">
     <div class="container">
         <div class="row">
@@ -217,6 +292,5 @@
     <!--esse js serve para manipular os dados de CEP com uma API-->
     <script src="JS/CEP.js"></script>
     <script src="JS/Carrinho.js"></script>
-    <script src="JS/CarrinhoPag.js"></script>
 </body>
 </html>

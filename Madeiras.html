@@ -11,7 +11,7 @@
 <body>
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#"><img src="IMG/Titulo Png.png" alt="Titulo" width="150" height="100"></a>
+    <a class="navbar-brand" href="Mercadorias.html"><img src="IMG/Titulo Png.png" alt="Titulo" width="150" height="100"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
     </button>
@@ -150,51 +150,129 @@
         </p>
 
     </div>
+<!--Cards de produtos-->
+    <div class="row g-4">
 
-    <div class="row" id="listaProdutos">
+        <div class="col-lg-3 col-md-6">
 
-      <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <div class="produto-card">
 
-    <div class="produto-card h-100">
+                <img src="img/Madeira_Cedro.jfif" class="produto-img" alt="Cedro">
 
-        <img
-            src="IMG/TabuaMadeira.jpg" width="100%"
-            class="produto-img"
-            alt="Pinus">
+                <div class="produto-info">
 
-        <div class="produto-body">
+                    <h5>Cedro</h5>
 
-            <h5 class="produto-titulo">
-                Tábua de Pinus
-            </h5>
+                   <div class="preco">
+                       <span style="text-decoration: line-through;"><strong>R$ 55,00</strong></span>
+                        <span class="desconto">R$ 46,99 15% OFF</span>                                               
+                    </div>
 
-            <p class="produto-descricao">
-                Madeira tratada para construção e acabamento.
-            </p>
+                <button
+                class="btn btn-warning w-100 btn-carrinho"
+                data-id="1"
+                data-nome="Cedro"
+                data-preco="46.99">
 
-            <div class="produto-preco">
-                R$ 89,90
+                Adicionar ao Carrinho
+
+                </button>
+                </div>
+
+                
+
             </div>
-
-            <div class="produto-estoque mb-3">
-                Estoque: 150 unidades
-            </div>
-
-        <button
-            class="btn btn-warning btn-carrinho"
-            data-id="1"
-            data-nome="Tábua de Pinus"
-            data-preco="89.90">
-
-            Adicionar ao Carrinho
-
-        </button>
 
         </div>
 
-    </div>
+        <div class="col-lg-3 col-md-6">
 
-</div>
+            <div class="produto-card">
+
+                <img src="img/Cumaru_Madeira.webp" class="produto-img" alt="Cumaru">
+
+                <div class="produto-info">
+
+                    <h5>Cumaru</h5>
+
+                    <div class="preco">
+                        <strong>R$ 85,00</strong>
+                    </div>
+
+                   <button
+                class="btn btn-warning w-100 btn-carrinho"
+                data-id="2"
+                data-nome="Cumaru"
+                data-preco="85.00">
+
+                Adicionar ao Carrinho
+
+                </button>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+
+            <div class="produto-card">
+
+                <img src="img/Madeira_Ipe.jpg" class="produto-img" alt="Ipe">
+
+                <div class="produto-info">
+
+                    <h5>Ipe</h5>
+
+                    <div class="preco">
+                       <span style="text-decoration: line-through;"><strong>R$ 120,00</strong></span>
+                        <span class="desconto">R$ 102,00 15% OFF</span>                                               
+                    </div>
+                    
+
+                    <button
+                class="btn btn-warning w-100 btn-carrinho"
+                data-id="3"
+                data-nome="Ipe"
+                data-preco="102.00">
+
+                Adicionar ao Carrinho
+
+                </button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+
+            <div class="produto-card">
+
+                <img src="img/Jatoba.webp" class="produto-img" alt="Jatoba">
+
+                <div class="produto-info">
+
+                    <h5>Jatoba</h5>
+
+                    <div class="preco">
+                        <strong>R$ 200,00</strong>
+                    </div>
+
+                <!--Botão guarda as informações do produto no carrinho-->  
+                <button
+                class="btn btn-warning w-100 btn-carrinho"
+                data-id="4"
+                data-nome="Jatoba"
+                data-preco="200.00">
+
+                Adicionar ao Carrinho
+
+                </button>
+                </div>
+
+            </div>
+
+        </div>
 
     </div>
 
@@ -206,16 +284,15 @@
             <div class="col-md-4">
                 <h5>Contato</h5>
                 <ul class="list-unstyled">
-                    <li><i class="bi bi-geo-alt-fill"></i> Rua Exemplo, 123 - Cidade, Estado</li>
+                    <li><i class="bi bi-geo-alt-fill"></i> Rua Exemplo, 67 - São Bernardo do Campo, SP</li>
                     <li><i class="bi bi-telephone-fill"></i> (67) 6767-6767</li>
                     <li><i class="bi bi-envelope-fill"></i> contato@madeiramadeira.com</li>
                 </ul>
             </div>      
-            <p>&copy; 2023 Madeira Madeira. Todos os direitos reservados.</p>      
+            <p>&copy; 2023 Madeira Madeira. Todos os direitos reservados. (SITE TOTALMENTE FICTICIO, FEITO PARA FINS EDUCACIONAIS)</p>      
         </div>
     </div>
 </div>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>    
     <!--esse js serve para manipular os dados do usuário, vou tentar implementar BC D DADOS-->
     <script src="JS/Usuario.js"></script>

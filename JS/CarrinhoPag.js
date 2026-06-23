@@ -1,90 +1,226 @@
-document.addEventListener("DOMContentLoaded", carregarCarrinho);
+document.addEventListener("DOMContentLoaded", () => {
 
-function carregarCarrinho(){
+    const lista = document.getElementById("listaCarrinho");
 
     let carrinho =
         JSON.parse(localStorage.getItem("carrinho")) || [];
 
-    let html = "";
+    let subtotal = 0;
 
-    let totalItens = 0;
-    let total = 0;
+    if (carrinho.length === 0) {
 
-    carrinho.forEach((produto,index)=>{
+        lista.innerHTML = `
+            <div class="alert alert-warning">
+                Seu carrinho está vazio.
+            </div>
+        `;
 
-        let subtotal =
-            produto.preco * produto.quantidade;
+    } else {
 
-        totalItens += produto.quantidade;
-        total += subtotal;
+        carrinho.forEach((produto, index) => {
 
-        html += `
+            subtotal += Number(produto.preco);
 
-        <div class="card mb-3">
+            lista.innerHTML += `
+                <div class="card mb-3">
 
-            <div class="card-body">
+                    <div class="card-body d-flex justify-content-between align-items-center">
 
-                <div class="row align-items-center">
-
-                    <div class="col-md-6">
-
-                        <h5>${produto.nome}</h5>
-
-                    </div>
-
-                    <div class="col-md-2">
-
-                        ${produto.quantidade}x
-
-                    </div>
-
-                    <div class="col-md-2">
-
-                        R$ ${Number(produto.preco).toFixed(2)}
-
-                    </div>
-
-                    <div class="col-md-2">
+                        <div>
+                            <h5>${produto.nome}</h5>
+                            <p class="mb-0">
+                                R$ ${Number(produto.preco).toFixed(2)}
+                            </p>
+                        </div>
 
                         <button
                             class="btn btn-danger"
-                            onclick="removerProduto(${index})">
+                            onclick="removerItem(${index})">
 
-                            X
+                            Remover
 
                         </button>
 
                     </div>
 
                 </div>
+            `;
 
-            </div>
+        });
 
-        </div>
+    }
 
-        `;
-    });
+    let estado = localStorage.getItem("estado");
 
-    document.getElementById("itensCarrinho").innerHTML = html;
+    let frete = 30;
 
-    document.getElementById("totalItens").textContent =
-        totalItens;
+    switch (estado) {
 
-    document.getElementById("valorTotal").textContent =
-        "R$ " + total.toFixed(2);
-}
+        case "SP":
+            frete = 10;
+            break;
 
-function removerProduto(index){
+        case "RJ":
+            frete = 20;
+            break;
+
+        case "MG":
+            frete = 15;
+            break;
+
+        default:
+            frete = 30;
+    }
+
+    document.getElementById("subtotal").innerText =
+        subtotal.toFixed(2);
+
+    document.getElementById("valorFrete").innerText =
+        frete.toFixed(2);
+
+    let subtotalGlobal = subtotal;
+    let freteGlobal = frete;
+
+    function calcularTotal() {
+
+        let formaPagamento =
+            document.getElementById("pagamento").value;
+
+        let total =
+            subtotalGlobal + freteGlobal;
+
+        if (formaPagamento === "pix") {
+
+            total = total * 0.85;
+
+        }
+
+        if (formaPagamento === "credito") {
+
+            total = total * 1.05;
+
+        }
+
+        document.getElementById("total").innerText =
+            total.toFixed(2);
+
+    }
+
+    calcularTotal();
+
+    document
+        .getElementById("pagamento")
+        .addEventListener("change", calcularTotal);
+
+    document
+        .getElementById("btnFinalizar")
+        .addEventListener("click", finalizarCompra);
+
+});
+
+function removerItem(index) {
 
     let carrinho =
         JSON.parse(localStorage.getItem("carrinho")) || [];
 
-    carrinho.splice(index,1);
+    carrinho.splice(index, 1);
 
     localStorage.setItem(
         "carrinho",
         JSON.stringify(carrinho)
     );
 
-    carregarCarrinho();
+    location.reload();
+
+}
+
+function finalizarCompra() {
+
+    let carrinho =
+        JSON.parse(localStorage.getItem("carrinho")) || [];
+
+    if (carrinho.length === 0) {
+
+        alert("Seu carrinho está vazio!");
+
+        return;
+
+    }
+
+    let formaPagamento =
+        document.getElementById("pagamento").value;
+
+    let mensagem = "Compra realizada com sucesso!\n\n";
+
+    if (formaPagamento === "pix") {
+
+        mensagem += "Pagamento via PIX (15% OFF)";
+
+    } else if (formaPagamento === "credito") {
+
+        mensagem += "Pagamento via Cartão de Crédito (+5%)";
+
+    } else {
+
+        mensagem += "Pagamento via Cartão de Débito";
+
+    }
+
+    alert(mensagem);
+
+    localStorage.removeItem("carrinho");
+
+    window.location.href = "Mercadorias.html";
+
+}
+
+//Salvar vendas
+document.getElementById("btnFinalizar").addEventListener("click", finalizarCompra);
+
+function finalizarCompra() {
+
+    const usuario = document.getElementById("nomeUsuario").innerText || localStorage.getItem("usuarioLogado");
+    const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+
+    if (carrinho.length === 0) {
+        alert("Carrinho vazio");
+        return;
+    }
+
+    const subtotal = parseFloat(document.getElementById("subtotal").innerText);
+    const frete = parseFloat(document.getElementById("valorFrete").innerText);
+    const pagamento = document.getElementById("pagamento").value;
+
+    const total = parseFloat(document.getElementById("total").innerText);
+
+    const venda = {
+        usuario: usuario,
+        data: new Date().toLocaleString(),
+        itens: carrinho,
+        subtotal: subtotal,
+        frete: frete,
+        pagamento: pagamento,
+        total: total
+    };
+
+    fetch("API/SalvarVenda.php", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(venda)
+    })
+    .then(res => res.json())
+    .then(res => {
+
+        if (res.status === "ok") {
+
+            localStorage.removeItem("carrinho");
+
+            alert("Compra finalizada!");
+
+            window.location.href = "Mercadorias.html";
+        }
+
+    });
 }

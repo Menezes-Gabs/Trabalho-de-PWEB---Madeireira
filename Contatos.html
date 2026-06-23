@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre nós - Empresa</title>
+    <title>Pagina inicial</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"> <!---- Ícones do Bootstrap --->
     <link rel="stylesheet" href="CSS/Mercadorias.css">
@@ -138,63 +138,97 @@
     </div>
     </div>
 </nav>
-<!-- ================= ================= -->
-<section class="container py-5">
+<!-- ================= contatoxxx ================= -->
+<div class="container py-5">
 
-    <h1 class="mb-4">Meu Carrinho</h1>
+    <div class="text-center mb-5">
 
-    <div id="listaCarrinho"></div>
+        <h1>Contato</h1>
 
-    <div class="card p-4 mt-4">
-
-    <p>
-        Subtotal:
-        <strong>R$ <span id="subtotal">0.00</span></strong>
-    </p>
-
-    <p>
-        Frete:
-        <strong>R$ <span id="valorFrete">0.00</span></strong>
-    </p>
-
-    <div class="mb-3">
-
-        <label class="form-label">
-            Forma de Pagamento
-        </label>
-
-        <select id="pagamento" class="form-select">
-
-            <option value="pix">
-                PIX (15% OFF)
-            </option>
-
-            <option value="credito">
-                Cartão de Crédito (+5%)
-            </option>
-
-            <option value="debito">
-                Cartão de Débito
-            </option>
-
-        </select>
+        <p>
+            Entre em contato conosco para dúvidas, orçamentos ou informações.
+        </p>
 
     </div>
 
-    <hr>
+    <div class="row">
 
-    <h3>
-        Total:
-        R$ <span id="total">0.00</span>
-    </h3>
+        <div class="col-md-6">
 
-    <button id="btnFinalizar" class="btn btn-success mt-3">
-        Finalizar Compra
+            <h3>Informações de Contato</h3>
+
+            <p>
+                <strong>Endereço:</strong><br>
+                Rua Fernandinho, 67 - Centro<br>
+                São Paulo - SP
+            </p>
+
+            <p>
+                <strong>Telefone:</strong><br>
+                (11) 67676-6767
+            </p>
+
+            <p>
+                <strong>E-mail:</strong><br>
+                contato@torchwood.com.br
+            </p>
+
+            <p>
+                <strong>Horário de Atendimento:</strong><br>
+                Segunda a Sexta: 08h às 18h<br>
+                Sábado: 08h às 13h
+            </p>
+
+        </div>
+
+        <form id="formContato">
+
+    <div class="mb-3">
+        <label class="form-label">Nome</label>
+        <input type="text" id="nome" class="form-control">
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">E-mail</label>
+      <input type="email" id="email" class="form-control">
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Assunto</label>
+        <input type="text" class="form-control" id="assunto">
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Mensagem</label>
+        <textarea class="form-control" rows="5" id="mensagem"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-warning">
+        Enviar Mensagem
     </button>
+
+</form>
+
+    </div>
+
+    <hr class="my-5">
+
+    <div class="text-center">
+
+        <h3>Onde Estamos</h3>
+
+        <p>
+            Nossa loja está localizada em uma região de fácil acesso para retirada de produtos e atendimento presencial.
+        </p>
+
+        <img src="IMG/ContatoCarrosel.png"
+             class="img-fluid rounded"
+             alt="Localização da Empresa">
+
+    </div>
 
 </div>
 
-</section>
 <!---->
 <div class="footer">
     <div class="container">
@@ -217,6 +251,6 @@
     <!--esse js serve para manipular os dados de CEP com uma API-->
     <script src="JS/CEP.js"></script>
     <script src="JS/Carrinho.js"></script>
-    <script src="JS/CarrinhoPag.js"></script>
+    <script src="JS/Contatos.js"></script>
 </body>
 </html>

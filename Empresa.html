@@ -138,63 +138,86 @@
     </div>
     </div>
 </nav>
-<!-- ================= ================= -->
-<section class="container py-5">
+<!-- ================= SOBRE NÓS ================= -->
 
-    <h1 class="mb-4">Meu Carrinho</h1>
+<div class="container py-5">
 
-    <div id="listaCarrinho"></div>
+    <div class="text-center mb-5">
 
-    <div class="card p-4 mt-4">
+        <h1>Sobre Nós</h1>
 
-    <p>
-        Subtotal:
-        <strong>R$ <span id="subtotal">0.00</span></strong>
-    </p>
-
-    <p>
-        Frete:
-        <strong>R$ <span id="valorFrete">0.00</span></strong>
-    </p>
-
-    <div class="mb-3">
-
-        <label class="form-label">
-            Forma de Pagamento
-        </label>
-
-        <select id="pagamento" class="form-select">
-
-            <option value="pix">
-                PIX (15% OFF)
-            </option>
-
-            <option value="credito">
-                Cartão de Crédito (+5%)
-            </option>
-
-            <option value="debito">
-                Cartão de Débito
-            </option>
-
-        </select>
+        <p>
+            Conheça um pouco mais sobre a nossa empresa.
+        </p>
 
     </div>
 
-    <hr>
+    <div class="row">
 
-    <h3>
-        Total:
-        R$ <span id="total">0.00</span>
-    </h3>
+        <div class="col-md-6">
 
-    <button id="btnFinalizar" class="btn btn-success mt-3">
-        Finalizar Compra
-    </button>
+            <img src="IMG/SOBRENOS.png"
+                 alt="Empresa"
+                 class="img-fluid rounded">
+
+        </div>
+
+        <div class="col-md-6">
+
+            <h3>Nossa História</h3>
+
+            <p>
+                A TorchWood é uma empresa especializada na venda de materiais para construção e marcenaria.
+                Trabalhamos com madeiras, telhas, vernizes, portas, móveis e ferramentas para atender
+                nossos clientes com qualidade e confiança.
+            </p>
+
+            <p>
+                Nosso objetivo é oferecer produtos de qualidade, preços acessíveis e um atendimento
+                que ajude nossos clientes a encontrar exatamente o que precisam para seus projetos.
+            </p>
+
+        </div>
+
+    </div>
+
+    <hr class="my-5">
+
+    <div class="row text-center">
+
+        <div class="col-md-4">
+
+            <h4>Missão</h4>
+
+            <p>
+                Fornecer materiais de qualidade para construção e reforma.
+            </p>
+
+        </div>
+
+        <div class="col-md-4">
+
+            <h4>Visão</h4>
+
+            <p>
+                Ser referência no setor madeireiro da região.
+            </p>
+
+        </div>
+
+        <div class="col-md-4">
+
+            <h4>Valores</h4>
+
+            <p>
+                Honestidade, respeito, qualidade e compromisso.
+            </p>
+
+        </div>
+
+    </div>
 
 </div>
-
-</section>
 <!---->
 <div class="footer">
     <div class="container">
@@ -216,7 +239,6 @@
     <script src="JS/Usuario.js"></script>
     <!--esse js serve para manipular os dados de CEP com uma API-->
     <script src="JS/CEP.js"></script>
-    <script src="JS/Carrinho.js"></script>
-    <script src="JS/CarrinhoPag.js"></script>
+    <script src="js/Carrinho.js"></script>
 </body>
 </html>

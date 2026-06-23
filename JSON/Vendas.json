@@ -1,1 +1,124 @@
-[]
+[
+    {
+        "usuario": "Jo\u00e3o",
+        "data": "22\/06\/2026, 11:31:06",
+        "itens": [
+            {
+                "id": "1",
+                "nome": "Cedro",
+                "preco": 46.99
+            },
+            {
+                "id": "2",
+                "nome": "Cumaru",
+                "preco": 85
+            }
+        ],
+        "subtotal": 131.99,
+        "frete": 10,
+        "pagamento": "pix",
+        "total": 120.69
+    },
+    {
+        "usuario": "Jo\u00e3o",
+        "data": "22\/06\/2026, 11:38:01",
+        "itens": [
+            {
+                "id": "1",
+                "nome": "Cedro",
+                "preco": 46.99
+            }
+        ],
+        "subtotal": 46.99,
+        "frete": 10,
+        "pagamento": "pix",
+        "total": 48.44
+    },
+    {
+        "usuario": "Maria",
+        "data": "22\/06\/2026, 11:38:26",
+        "itens": [
+            {
+                "id": "2",
+                "nome": "Cumaru",
+                "preco": 85
+            }
+        ],
+        "subtotal": 85,
+        "frete": 30,
+        "pagamento": "pix",
+        "total": 97.75
+    },
+    {
+        "usuario": "Maria",
+        "data": "22\/06\/2026, 11:39:41",
+        "itens": [
+            {
+                "id": "12",
+                "nome": "Makita",
+                "preco": "1187.25",
+                "quantidade": 1
+            }
+        ],
+        "subtotal": 1187.25,
+        "frete": 30,
+        "pagamento": "pix",
+        "total": 1034.66
+    },
+    {
+        "usuario": "Maria",
+        "data": "22\/06\/2026, 11:40:04",
+        "itens": [
+            {
+                "id": "6",
+                "nome": "Telha Termoac\u00fastica",
+                "preco": "30.00",
+                "quantidade": 1
+            }
+        ],
+        "subtotal": 30,
+        "frete": 30,
+        "pagamento": "pix",
+        "total": 51
+    },
+    {
+        "usuario": "Jo\u00e3o",
+        "data": "22\/06\/2026, 13:31:53",
+        "itens": [
+            {
+                "id": "1",
+                "nome": "Cedro",
+                "preco": 46.99
+            },
+            {
+                "id": "2",
+                "nome": "Cumaru",
+                "preco": 85
+            }
+        ],
+        "subtotal": 131.99,
+        "frete": 30,
+        "pagamento": "debito",
+        "total": 161.99
+    },
+    {
+        "usuario": "Jo\u00e3o",
+        "data": "22\/06\/2026, 13:34:20",
+        "itens": [
+            {
+                "id": "3",
+                "nome": "Ipe",
+                "preco": 102
+            },
+            {
+                "id": "3",
+                "nome": "Ipe",
+                "preco": 102
+            }
+        ],
+        "subtotal": 204,
+        "frete": 30,
+        "pagamento": "pix",
+        "total": 198.9
+    }
+]

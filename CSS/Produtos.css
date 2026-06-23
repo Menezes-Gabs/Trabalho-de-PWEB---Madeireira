@@ -190,24 +190,23 @@
     margin-bottom: 10px;
 }
 
-.produto-descricao{
-    color: #666;
-    font-size: 0.9rem;
-    min-height: 45px;
+.preco{ /*preço do produto*/
+    color: Green;
+    font-family: 'Arial', sans-serif;
+    font-size: 17px;
 }
 
-.produto-preco{
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #198754;
+.desconto {
+    background: #fffb00;
+    color: #000000;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 3px 8px;
+    border-radius: 4px;
+    margin-left: 8px;
 }
 
-.produto-estoque{
-    color: #888;
-    font-size: 0.9rem;
-}
-
-.btn-produto{
+.btn-carrinho{
     width: 100%;
     border-radius: 10px;
     padding: 10px;

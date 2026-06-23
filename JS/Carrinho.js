@@ -1,65 +1,42 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.querySelectorAll(".btn-carrinho").forEach(botao => {
 
-    atualizarContador();
+    botao.addEventListener("click", () => {
 
-    const botoes = document.querySelectorAll(".btn-carrinho");
+        const produto = {
 
-    botoes.forEach(botao => {
+            id: botao.dataset.id,
+            nome: botao.dataset.nome,
+            preco: parseFloat(botao.dataset.preco)
+        };
 
-        botao.addEventListener("click", () => {
+        let carrinho =
+            JSON.parse(localStorage.getItem("carrinho")) || [];
 
-            const produto = {
+        carrinho.push(produto);
 
-                id: botao.dataset.id,
-                nome: botao.dataset.nome,
-                preco: botao.dataset.preco,
-                quantidade: 1
+        localStorage.setItem(
+            "carrinho",
+            JSON.stringify(carrinho)
+        );
 
-            };
+        atualizarContador();
 
-            let carrinho =
-                JSON.parse(localStorage.getItem("carrinho")) || [];
-
-            const existente = carrinho.find(
-                item => item.id === produto.id
-            );
-
-            if(existente){
-
-                existente.quantidade++;
-
-            }else{
-
-                carrinho.push(produto);
-
-            }
-
-            localStorage.setItem(
-                "carrinho",
-                JSON.stringify(carrinho)
-            );
-
-            atualizarContador();
-
-        });
-
+        alert("Produto adicionado ao carrinho!");
     });
 
 });
 
-function atualizarContador(){
+function atualizarContador() {
 
-    let carrinho =
+    const carrinho =
         JSON.parse(localStorage.getItem("carrinho")) || [];
 
-    let total = 0;
+    const contador =
+        document.getElementById("contadorCarrinho");
 
-    carrinho.forEach(item => {
-
-        total += item.quantidade;
-
-    });
-
-    document.getElementById("contadorCarrinho").textContent = total;
-
+    if (contador) {
+        contador.textContent = carrinho.length;
+    }
 }
+
+atualizarContador();
